@@ -9,7 +9,6 @@ require('pry')
 
 
 get ('/') do
-#@name = params.fetch("name").gsub!(/^\"|\"?$/, '')
  erb(:index)
 end
 
@@ -18,12 +17,7 @@ end
 
   @name = params.fetch("name").tr(" ", "_")
   weather = open("http://api.wunderground.com/api/92245eaf89618deb/almanac/q/CA/#{@name}.json")
-  #erb(:index)
-#end
 
-  # #get ('/results') do
-  #   @name = params.fetch("name")
-  #   weather = open("http://api.wunderground.com/api/92245eaf89618deb/almanac/q/CA/#{@name}.json")
 
     doc = ""
 
